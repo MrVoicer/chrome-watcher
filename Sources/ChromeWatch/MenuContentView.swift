@@ -86,14 +86,6 @@ struct MenuContentView: View {
 
     private var footer: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Button {
-                monitor.openMyChrome()
-            } label: {
-                Label("Open my Chrome", systemImage: "plus.app")
-            }
-            .help("Runs open -n -a \"Google Chrome\"")
-            .focusable(false)
-
             HStack {
                 Picker("Refresh every", selection: $monitor.interval) {
                     ForEach(Monitor.intervalChoices, id: \.self) { seconds in
@@ -115,6 +107,13 @@ struct MenuContentView: View {
                     .focusable(false)
             }
             HStack {
+                Button {
+                    monitor.openMyChrome()
+                } label: {
+                    Label("Open my Chrome", systemImage: "plus.app")
+                }
+                .help("Runs open -n -a \"Google Chrome\"")
+                .focusable(false)
                 Spacer()
                 Button("Quit ChromeWatch") { NSApp.terminate(nil) }
                     .keyboardShortcut("q")
