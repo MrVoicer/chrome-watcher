@@ -1,11 +1,15 @@
 # ChromeWatch
 
+[![CI](https://github.com/MrVoicer/chrome-watcher/actions/workflows/ci.yml/badge.svg)](https://github.com/MrVoicer/chrome-watcher/actions/workflows/ci.yml)
+
 A macOS menu bar app that lists every running Google Chrome instance, says whether it is
 yours or automated (Playwright, Puppeteer, MCP browser servers, coding agents), shows
 who launched it and how much RAM it uses, and lets you quit stale ones.
 
 The menu bar shows `◉ N`, the number of Chrome instances. The icon turns orange when an
 automated instance has been running for more than 24 hours.
+
+<img src="docs/screenshot.png" alt="ChromeWatch menu showing a My Chrome row launched from the Dock (4.22 GB) and an Automated row whose parent exited (773 MB)" width="445">
 
 ## Requirements
 
